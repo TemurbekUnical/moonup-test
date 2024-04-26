@@ -3,7 +3,7 @@ type TLocalStorageKeys = "user";
 
 class ApiStorage {
   public get<T>(key: TLocalStorageKeys): any {
-    const item = localStorage.getItem(key);
+    const item = localStorage?.getItem(key);
     if (!(key in localStorage)) return undefined;
     try {
       const savedData = JSON.parse(item || "") as T | string;
@@ -22,7 +22,7 @@ class ApiStorage {
     if (typeof savingData === "object") {
       savingData = JSON.stringify(savingData);
     }
-    localStorage.setItem(key, savingData as string);
+    localStorage?.setItem(key, savingData as string);
   }
 
   public update<T extends TLocalStorageKeys, K extends string>(
@@ -30,18 +30,18 @@ class ApiStorage {
     newData: T
   ): string {
     if (!(key in localStorage)) return "key_not_available";
-    localStorage.setItem(key, newData as string);
+    localStorage?.setItem(key, newData as string);
 
     return "update_success";
   }
 
   public remove(key: TLocalStorageKeys) {
     if (key in localStorage) {
-      localStorage.removeItem(key);
+      localStorage?.removeItem(key);
     }
   }
   public clear() {
-    localStorage.clear();
+    localStorage?.clear();
   }
 }
 
