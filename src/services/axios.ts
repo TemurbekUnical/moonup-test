@@ -1,7 +1,7 @@
 import browserStorage from "@/utils/browserStorage";
 import axios from "axios";
 
-const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
+const baseURL = "https://club.metsenat.uz/api/v1";
 
 const axiosInstance = axios.create({
   baseURL,
