@@ -1,3 +1,4 @@
+"use client";
 import { TError } from "@/types";
 import { AxiosRequestConfig, AxiosResponse } from "axios";
 import { useCallback, useEffect, useState } from "react";
@@ -50,7 +51,4 @@ export const useRequest = <TData, TBody = unknown>(
     isPending,
     error,
   };
-};
-export const request = (config: AxiosRequestConfig) => {
-  return axiosInstance(config);
 };
