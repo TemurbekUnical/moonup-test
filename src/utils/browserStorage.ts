@@ -1,3 +1,4 @@
+"use client";
 type TLocalStorageKeys = "user";
 
 class ApiStorage {
