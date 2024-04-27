@@ -5,6 +5,20 @@ import { Column, ListResponse } from "@/types/common.types";
 import { IStudent } from "@/types/student.types";
 import moneyFormat from "@/utils/moneyFormat";
 
+const Students = () => {
+  const { data } = useRequest<ListResponse<IStudent>>({
+    method: "GET",
+    url: "/student-list/",
+  });
+  return (
+    <div className="pt-10">
+      <Table columns={columns} data={data?.data.results} />
+    </div>
+  );
+};
+
+export default Students;
+
 const columns: Column<IStudent>[] = [
   {
     title: "#",
@@ -44,16 +58,3 @@ const columns: Column<IStudent>[] = [
     },
   },
 ];
-const Students = () => {
-  const { data } = useRequest<ListResponse<IStudent>>({
-    method: "GET",
-    url: "/student-list/",
-  });
-  return (
-    <div className="pt-10">
-      <Table columns={columns} data={data?.data.results} />
-    </div>
-  );
-};
-
-export default Students;

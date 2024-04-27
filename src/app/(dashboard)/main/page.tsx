@@ -11,9 +11,8 @@ const DashboardMain = (props: PageProps) => {
   });
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center pt-10">
       <div className="container w-main">
-        <h1>Dashboard</h1>
         {data?.data && (
           <div className="grid grid-cols-3 gap-7 justify-between">
             <DashboardCard

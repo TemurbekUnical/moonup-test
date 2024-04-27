@@ -5,6 +5,22 @@ import { Column, ListResponse } from "@/types/common.types";
 import dateFormat from "@/utils/dateFormat";
 import moneyFormat from "@/utils/moneyFormat";
 import React from "react";
+
+const Sponsors = () => {
+  const { data } = useRequest<ListResponse<ISponsor>>({
+    url: "/sponsor-list/",
+    method: "GET",
+  });
+  return (
+    <div>
+      <div className="pt-10">
+        <Table columns={columns} data={data?.data.results} />
+      </div>
+    </div>
+  );
+};
+
+export default Sponsors;
 const columns: Column<ISponsor>[] = [
   {
     title: "#",
@@ -56,18 +72,3 @@ const columns: Column<ISponsor>[] = [
     },
   },
 ];
-const Sponsors = () => {
-  const { data } = useRequest<ListResponse<ISponsor>>({
-    url: "/sponsor-list/",
-    method: "GET",
-  });
-  return (
-    <div>
-      <div className="pt-10">
-        <Table columns={columns} data={data?.data.results} />
-      </div>
-    </div>
-  );
-};
-
-export default Sponsors;
