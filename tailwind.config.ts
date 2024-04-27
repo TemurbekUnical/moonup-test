@@ -25,6 +25,9 @@ const config: Config = {
       colors: {
         "main-blue": "#2E5BFF",
       },
+      width: {
+        main: "1200px",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

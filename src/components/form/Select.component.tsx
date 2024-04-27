@@ -2,8 +2,8 @@ import { Control, Controller, Path } from "react-hook-form";
 import { GroupBase, OptionsOrGroups } from "react-select";
 import Error from "./Error.component";
 import Label from "./Label.component";
-import { Option } from "@/types";
-import Selector from "@/components/ui/Select.component";
+import { Option } from "@/types/common.types";
+import Selector from "@/components/inputs/Select.component";
 
 interface ISelect<
   FormNames extends Record<string, any>,

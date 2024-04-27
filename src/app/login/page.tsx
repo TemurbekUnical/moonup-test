@@ -5,7 +5,7 @@ import InputForm, {
 import Button from "@/components/ui/Button.component";
 import Image from "@/components/ui/Image.component";
 import { useRequest } from "@/services/api";
-import { ILoginForm, LoginSchema, PostLogin } from "@/types/login";
+import { ILoginForm, LoginSchema, PostLogin } from "@/types/login.types";
 import browserStorage from "@/utils/browserStorage";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";

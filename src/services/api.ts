@@ -1,5 +1,5 @@
 "use client";
-import { TError } from "@/types";
+import { TError } from "@/types/common.types";
 import { AxiosRequestConfig, AxiosResponse } from "axios";
 import { useCallback, useEffect, useState } from "react";
 import toast from "react-hot-toast";
@@ -28,7 +28,7 @@ export const useRequest = <TData, TBody = unknown>(
         });
         setData(data);
         options?.onSuccess?.(data.data);
-        toast.success("");
+        // toast.success("");
       } catch (error) {
         const errorMessage = (error as TError).response.data.detail;
         setError(error as TError);

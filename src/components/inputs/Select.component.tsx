@@ -1,4 +1,4 @@
-import { ComponentType, Option } from "@/types";
+import { ComponentType, Option } from "@/types/common.types";
 import { useCallback } from "react";
 import ReactSelect from "react-select";
 

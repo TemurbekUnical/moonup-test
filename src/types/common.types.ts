@@ -4,7 +4,6 @@ import { FieldPath, RegisterOptions } from "react-hook-form";
 export interface Option<TValue = any, TLabel = string> {
   value: TValue;
   label?: TLabel;
-  name?: TLabel;
 }
 export type TSetState<StateType> = React.Dispatch<
   React.SetStateAction<StateType>
@@ -27,4 +26,18 @@ export interface TError {
     config: AxiosRequestConfig;
     request: unknown;
   };
+}
+export type TableData = {
+  id: number;
+};
+export interface Column<T extends TableData> {
+  render: (row: T, order: number) => React.ReactNode;
+  title: string;
+  className?: string;
+}
+export interface ListResponse<T extends TableData> {
+  count: number;
+  next: `https://club.metsenat.uz/api/v1/${string}`;
+  previous: null;
+  results: T[];
 }

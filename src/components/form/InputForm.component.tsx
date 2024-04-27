@@ -2,8 +2,8 @@ import { useCallback, useState } from "react";
 import { Control, Controller, Path } from "react-hook-form";
 import Error from "./Error.component";
 import Label from "./Label.component";
-import { TRules } from "@/types";
-import Input from "../ui/Input.component";
+import { TRules } from "@/types/common.types";
+import Input from "../inputs/Input.component";
 interface IInputProps<FormNames extends Record<string, any>> {
   rules?: TRules<FormNames>;
   control: Control<FormNames>;

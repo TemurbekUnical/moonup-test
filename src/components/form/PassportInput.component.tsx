@@ -7,8 +7,8 @@ import {
 } from "react-hook-form";
 import Error from "./Error.component";
 import Label from "./Label.component";
-import Input from "../ui/Input.component";
-import { TRules } from "@/types";
+import Input from "../inputs/Input.component";
+import { TRules } from "@/types/common.types";
 
 interface PassportInputProps<FormNames extends Record<string, any>> {
   label?: string;

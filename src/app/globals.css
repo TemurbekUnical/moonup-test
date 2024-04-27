@@ -12,3 +12,6 @@ body {
     text-wrap: balance;
   }
 }
+button {
+  outline: none;
+}

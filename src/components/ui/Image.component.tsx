@@ -1,4 +1,4 @@
-import { ArgumentType } from "@/types";
+import { ArgumentType } from "@/types/common.types";
 import NextImage from "next/image";
 
 const Image = (props: ArgumentType<typeof NextImage>) => {
