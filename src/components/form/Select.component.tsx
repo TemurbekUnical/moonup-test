@@ -22,7 +22,7 @@ interface ISelect<
   onChange?: (option: TOption) => void;
 }
 const getLabel = (option: Option) =>
-  option.label || option?.name || option?.value || "no label";
+  option.label || option?.value || "no label";
 function Select<
   FormNames extends Record<string, any>,
   TOption extends Option = Option
